@@ -72,7 +72,7 @@
             <label class="block text-gray-700 text-sm  font-bold mb-2">Gender</label>
             <select name="profileType" wire:model='gender' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
                 <option value="male" selected>Male</option>
-                <option value="female">Femal</option>
+                <option value="female">Female</option>
             </select>
             @error('gender')
                 <p class="mt-2 text-sm text-red-600"><span class="font-medium">Oops!</span> {{$message}}</p>
