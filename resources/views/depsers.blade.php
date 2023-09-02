@@ -1,0 +1,1 @@
+<livewire:dep-ser.main-component /> 

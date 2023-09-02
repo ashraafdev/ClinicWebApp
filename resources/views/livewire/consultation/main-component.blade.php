@@ -7,7 +7,9 @@
                 </h2>
             </div>
             <div class="basis-3/12">
-                <button type="button" onclick="Livewire.emit('openModal', 'consultation.new-consultation')" class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Add Consultation</button>
+                @unlessrole('Infirmier|Medecin')
+                    <button type="button" onclick="Livewire.emit('openModal', 'consultation.new-consultation')" class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Add Consultation</button>
+                @endunlessrole
                 <button type="button" onclick="Livewire.emit('openModal', 'consultation.search-component')" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Search</button>
             </div>
         </div>
@@ -19,4 +21,15 @@
             </div>
         </div>
     </div>
+    @push('scripts')
+        <script>
+            function showImage(data) {
+                var image = new Image();
+                image.src = "data:image/jpg;base64," + data;
+
+                var w = window.open("");
+                w.document.write(image.outerHTML);
+            }
+        </script>
+    @endpush
 </x-app-layout>

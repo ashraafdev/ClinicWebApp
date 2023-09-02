@@ -69,8 +69,8 @@
     <div class="mb-4">
         <label class="block text-gray-700 text-sm  font-bold mb-2">Medecin</label>
         <select wire:model='medecin' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+            <option selected>----</option>
             @foreach ($medecins as $medecin)
-                <option selected>----</option>
                 <option value="{{ $medecin->id }}">{{ $medecin->name }}</option>
             @endforeach
         </select>

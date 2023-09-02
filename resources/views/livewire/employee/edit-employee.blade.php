@@ -101,7 +101,7 @@
         </div>
         <div class="mb-4">
             <label class="block text-gray-700 text-sm  font-bold mb-2" for="password">Employee Type</label>
-            <select name="profileType" wire:model='user.typeEmploi'  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+            <select name="profileType" wire:model='user.typeEmploi' wire:change="toggleInfirmierOption($event.target.value)" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
                 @foreach ($roles as $role)
                     <option value="{{ $role }}">{{ $role }}</option>
                 @endforeach
@@ -111,6 +111,16 @@
             @enderror
         </div>
     </div>
+    @if ($showInfirmierOption)
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm  font-bold mb-2" for="password">Departement/Service</label>
+            <select name="depser" wire:model='depSerSelected' required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+                @foreach ($deps_sers as $dep_ser)
+                    <option value="{{ $dep_ser->id }}">{{ $dep_ser->name }}</option>
+                @endforeach
+            </select>
+        </div>
+    @endif
     <button
         class="w-full bg-indigo-500 text-white text-sm font-bold py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300"
         type="submit">Update Employee

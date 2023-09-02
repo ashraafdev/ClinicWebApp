@@ -1,0 +1,1 @@
+<livewire:operations.main-component />     

@@ -22,15 +22,21 @@
                         <x-nav-link href="{{ route('roles') }}" :active="request()->routeIs('roles')">
                             {{ __('Roles') }}
                         </x-nav-link>
+                        <x-nav-link href="{{ route('depsers') }}" :active="request()->routeIs('depsers')">
+                            {{ __('Departements/Services') }}
+                        </x-nav-link>
                     @endhasrole
-                    @hasrole('Assistant')
+                    @hasanyrole('Assistant|Infirmier|Medecin')
                         <x-nav-link href="{{ route('patients') }}" :active="request()->routeIs('patients')">
                             {{ __('Patients') }}
                         </x-nav-link>
                         <x-nav-link href="{{ route('consultations') }}" :active="request()->routeIs('consultations')">
                             {{ __('Consultations') }}
                         </x-nav-link>
-                    @endhasrole
+                        <x-nav-link href="{{ route('operations') }}" :active="request()->routeIs('operations')">
+                            {{ __('Operations') }}
+                        </x-nav-link>
+                    @endhasanyrole
                 </div>
             </div>
 

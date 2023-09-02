@@ -21,9 +21,9 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        User::create([
+        $admin = User::create([
             'name' => 'Achraf Hebboul',
-            'email' => 'hebboulachraf@gmail.com',
+            'email' => 'achraf@clinic.com',
             'password' => Hash::make('123456789'),
             'cin' => 'xx123456',
             'phone' => '0601020304',
@@ -33,5 +33,7 @@ class DatabaseSeeder extends Seeder
             'recrutingDate' => date('Y-m-d'),
             'typeEmploi' => 'Administrator',
         ]);
+
+        $admin->assignRole('Administrator');
     }
 }

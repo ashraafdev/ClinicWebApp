@@ -102,7 +102,7 @@
         </div>
         <div class="mb-4">
             <label class="block text-gray-700 text-sm  font-bold mb-2" for="password">Employee Type</label>
-            <select name="profileType" wire:model='typeEmploi'  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+            <select name="profileType" wire:model='typeEmploi'  wire:change="toggleAdditonalOption($event.target.value)"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
                 @foreach ($roles as $role)
                     <option value="{{ $role }}">{{ $role }}</option>
                 @endforeach
@@ -112,6 +112,43 @@
             @enderror
         </div>
     </div>
+    @if ($showInfirmierOption || $showMedecinOption)
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm  font-bold mb-2" for="password">Departement/Service</label>
+            <select name="depser" wire:model='depser' required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+                @foreach ($deps_sers as $dep_ser)
+                    <option value="{{ $dep_ser->id }}">{{ $dep_ser->name }}</option>
+                @endforeach
+            </select>
+            @error('depser')
+                <p class="mt-2 text-sm text-red-600"><span class="font-medium">Oops!</span> {{$message}}</p>
+            @enderror
+        </div>
+    @endif
+    @if ($showMedecinOption)
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm  font-bold mb-2">Specialist</label>
+            <input   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                type="text"  placeholder="....."
+                wire:model='speciality'
+                required
+            />
+            @error('speciality')
+                <p class="mt-2 text-sm text-red-600"><span class="font-medium">Oops!</span> {{$message}}</p>
+            @enderror
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm  font-bold mb-2">Cost</label>
+            <input   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                type="number"  placeholder="100 DH"
+                wire:model='cost'
+                required
+            />
+            @error('cost')
+                <p class="mt-2 text-sm text-red-600"><span class="font-medium">Oops!</span> {{$message}}</p>
+            @enderror
+        </div> 
+    @endif
     <button
         class="w-full bg-indigo-500 text-white text-sm font-bold py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300"
         type="submit">Add Employee

@@ -30,4 +30,6 @@ Route::middleware([
     Route::view('/roles', 'roles')->name('roles');
     Route::view('/patients', 'patients')->name('patients');
     Route::view('/consultations', 'consultations')->name('consultations');
+    Route::view('/operations', 'operations')->name('operations');
+    Route::view('/depsers', 'depsers')->name('depsers');
 });

@@ -8,14 +8,13 @@ use LivewireUI\Modal\ModalComponent;
 
 class SearchComponent extends ModalComponent
 {
-    public $patient, $medecin, $date;
-
-    
+    public $patient, $medecin, $startDate, $endDate;
 
     protected $rules = [
-        'patient' => 'required_without_all|numeric',
-        'medecin' => 'required_without_all|numeric',
-        'date' => 'required_without_all|date',
+        'patient' => 'required_without_all:medecin,startDate,endDate',
+        'medecin' => 'required_without_all:patient,startDate,endDate',
+        'startDate' => 'required_without_all:patient,medecin,endDate',
+        'endDate' => 'required_without:startDate'
     ];
 
     public function render()
@@ -31,5 +30,6 @@ class SearchComponent extends ModalComponent
         $validatedData = $this->validate();
         
         $this->emitTo('consultation.consultations-list', 'searchData', $validatedData);
+        $this->closeModal();
     }
 }
