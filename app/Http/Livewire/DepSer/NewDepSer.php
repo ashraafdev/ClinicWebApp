@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\DepSer;
 
 use App\Models\DepSer;
+use Exception;
 use LivewireUI\Modal\ModalComponent;
 
 class NewDepSer extends ModalComponent
@@ -21,8 +22,12 @@ class NewDepSer extends ModalComponent
     public function store()
     {
         $validatedData = $this->validate();
-
-        DepSer::create($validatedData);
-        return redirect('/depsers');
+        
+        try {
+            DepSer::create($validatedData);
+            return redirect('/depsers');
+        } catch (Exception $e) {
+            $this->emit('openModal', 'misc.error-modal');
+        }
     }
 }

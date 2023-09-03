@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Role;
 
+use Exception;
 use LivewireUI\Modal\ModalComponent;
 use Spatie\Permission\Models\Role;
 
@@ -24,8 +25,12 @@ class EditRole extends ModalComponent
     public function store()
     {
         $validatedData = $this->validate();
-
-        $this->role->update($validatedData);
-        return redirect('/roles');
+        
+        try {
+            $this->role->update($validatedData);
+            return redirect('/roles');
+        } catch (Exception $e) {    
+            $this->emit('openModal', 'misc.error-modal');
+        }
     }
 }

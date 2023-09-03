@@ -97,10 +97,10 @@ class NewEmployee extends ModalComponent
             }
 
             DB::commit();
+            return redirect('/employees');
         } catch (Exception $e) {
             DB::rollBack();
+            $this->emit('openModal', 'misc.error-modal');
         }
-
-        return redirect('/employees');
     }
 }

@@ -47,7 +47,7 @@ class NewConsultation extends ModalComponent
     {
         return view('livewire.consultation.new-consultation', [
             'patients' => Patient::all(),
-            'staff' => User::all(),
+            'staff' => User::hasRoles(['Medecin', 'Infirmier', 'Doctor']),
             'showAdditionalData' => $this->showOperationAdditionalData,
         ]);
     }
@@ -85,10 +85,11 @@ class NewConsultation extends ModalComponent
 
             DB::commit();
             
+            return redirect('/consultations');
         } catch (Exception $e) {
             DB::rollBack();
+            $this->emit('openModal', 'misc.error-modal');
         }
 
-        return redirect('/consultations');
     }
 }

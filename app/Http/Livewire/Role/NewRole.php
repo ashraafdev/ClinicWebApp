@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Role;
 
+use Exception;
 use LivewireUI\Modal\ModalComponent;
 use Spatie\Permission\Models\Role;
 
@@ -23,7 +24,11 @@ class NewRole extends ModalComponent
     {
         $this->validate();
 
-        Role::create(['name' => $this->name]);
-        return redirect('/roles');
+        try {
+            Role::create(['name' => $this->name]);
+            return redirect('/roles');
+        } catch (Exception $e) {
+            $this->emit('openModal', 'misc.error-modal');
+        }
     }
 }

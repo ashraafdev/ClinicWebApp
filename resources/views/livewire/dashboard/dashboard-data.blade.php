@@ -75,8 +75,7 @@
             class="block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div class="flex justify-center">
                 <div class="-mt-8 inline-block rounded-full bg-white p-4 text-primary shadow-md">
-                    <img width="40"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABO0lEQVR4nO2YS2rDMBBA36qrfg6Sm+RC/Vwm7lViUmh33fYS9bKliykBCWZhx0qsWCMxDwTGmth6zExkGxzHPD0gC8cbjYgIFTC3UBdZm6Yz8gC8AoOaH4AuzFUj0p1o+o6KRGImNurcRmWmGpGpvhDL/eIi1mg6I8OJZv+mkb/fHZVtiN3IhrgD7jGK6bqf4pD4yH589DeNtPL+IQmLrE6knyin6kX2IzFmkdKlJZkaUv/uoMpJH1cn0qty0seriERyiCyJMSNSbB+RTCKpH+timZkVGWPJteTcbLrIShmJXJyRT+Bvpt5/gQ9gm3jtIiJy5thaFXkEbmZudpx/CvHvI/N6Mywmcpt4w7sQ/3PZeq8v8pyYkZcQ/0VepFSPXGtEXKQ0kisjpREXCXhGrJSWVDImaUbEccjDP+SrIVveErBnAAAAAElFTkSuQmCC">
+                    <img width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABcklEQVR4nO2XQUoDQRBFXxa6iOYOgoybHEQIXkcRcgAV1Cu4cREJKl7BMOhW0RuYKGpQBHdKS0lFm6Yz0zPNJIL5UJuqmvp/qmp6aPhHWAQuAaPWmyR5Deha5GLnRQrMAzvAAOgD2+oLxaaSvgBJcf18ExrHxBeCVeAD+ARalMTAI+A+4Lkl4Enz20Tg2SNACmdhAbjW3BPdg9I49QgQOwDqnnwhO9KcW6ARQ97S+ckcH/TND4F3i6DpPLOhsVdgJYY80c2VYutOrKnkRsV0gDclHS3dWgx5A7hRgs6YGdZ1DL7xnMWQ14BjLXSlC5WF0abb9mjFU0888yRsa9IQWC75ldgCzBjLXTo5REKw7ym+V0ZAYi2dHJ+hmFMRQ+3GrvqCBaROoOssXeEZOsgV0LOcF/rrLFQgVkBsgbwOVS7ARManLyCNbGG0AFMxwUyA+fMjmMFMyX7QnwL53S+9/+JRtW3ZAuSaJSIm0YkyV7vq8AWUEMCAdQt5BgAAAABJRU5ErkJggg==">
                 </div>
             </div>
             <div class="p-6">
@@ -90,8 +89,7 @@
             class="block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div class="flex justify-center">
                 <div class="-mt-8 inline-block rounded-full bg-white p-4 text-primary shadow-md">
-                    <img width="40"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABO0lEQVR4nO2YS2rDMBBA36qrfg6Sm+RC/Vwm7lViUmh33fYS9bKliykBCWZhx0qsWCMxDwTGmth6zExkGxzHPD0gC8cbjYgIFTC3UBdZm6Yz8gC8AoOaH4AuzFUj0p1o+o6KRGImNurcRmWmGpGpvhDL/eIi1mg6I8OJZv+mkb/fHZVtiN3IhrgD7jGK6bqf4pD4yH589DeNtPL+IQmLrE6knyin6kX2IzFmkdKlJZkaUv/uoMpJH1cn0qty0seriERyiCyJMSNSbB+RTCKpH+timZkVGWPJteTcbLrIShmJXJyRT+Bvpt5/gQ9gm3jtIiJy5thaFXkEbmZudpx/CvHvI/N6Mywmcpt4w7sQ/3PZeq8v8pyYkZcQ/0VepFSPXGtEXKQ0kisjpREXCXhGrJSWVDImaUbEccjDP+SrIVveErBnAAAAAElFTkSuQmCC">
+                    <img width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABcklEQVR4nO2XQUoDQRBFXxa6iOYOgoybHEQIXkcRcgAV1Cu4cREJKl7BMOhW0RuYKGpQBHdKS0lFm6Yz0zPNJIL5UJuqmvp/qmp6aPhHWAQuAaPWmyR5Deha5GLnRQrMAzvAAOgD2+oLxaaSvgBJcf18ExrHxBeCVeAD+ARalMTAI+A+4Lkl4Enz20Tg2SNACmdhAbjW3BPdg9I49QgQOwDqnnwhO9KcW6ARQ97S+ckcH/TND4F3i6DpPLOhsVdgJYY80c2VYutOrKnkRsV0gDclHS3dWgx5A7hRgs6YGdZ1DL7xnMWQ14BjLXSlC5WF0abb9mjFU0888yRsa9IQWC75ldgCzBjLXTo5REKw7ym+V0ZAYi2dHJ+hmFMRQ+3GrvqCBaROoOssXeEZOsgV0LOcF/rrLFQgVkBsgbwOVS7ARManLyCNbGG0AFMxwUyA+fMjmMFMyX7QnwL53S+9/+JRtW3ZAuSaJSIm0YkyV7vq8AWUEMCAdQt5BgAAAABJRU5ErkJggg==">
                 </div>
             </div>
             <div class="p-6">
@@ -105,8 +103,7 @@
             class="block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div class="flex justify-center">
                 <div class="-mt-8 inline-block rounded-full bg-white p-4 text-primary shadow-md">
-                    <img width="40"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABO0lEQVR4nO2YS2rDMBBA36qrfg6Sm+RC/Vwm7lViUmh33fYS9bKliykBCWZhx0qsWCMxDwTGmth6zExkGxzHPD0gC8cbjYgIFTC3UBdZm6Yz8gC8AoOaH4AuzFUj0p1o+o6KRGImNurcRmWmGpGpvhDL/eIi1mg6I8OJZv+mkb/fHZVtiN3IhrgD7jGK6bqf4pD4yH589DeNtPL+IQmLrE6knyin6kX2IzFmkdKlJZkaUv/uoMpJH1cn0qty0seriERyiCyJMSNSbB+RTCKpH+timZkVGWPJteTcbLrIShmJXJyRT+Bvpt5/gQ9gm3jtIiJy5thaFXkEbmZudpx/CvHvI/N6Mywmcpt4w7sQ/3PZeq8v8pyYkZcQ/0VepFSPXGtEXKQ0kisjpREXCXhGrJSWVDImaUbEccjDP+SrIVveErBnAAAAAElFTkSuQmCC">
+                    <img width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABcklEQVR4nO2XQUoDQRBFXxa6iOYOgoybHEQIXkcRcgAV1Cu4cREJKl7BMOhW0RuYKGpQBHdKS0lFm6Yz0zPNJIL5UJuqmvp/qmp6aPhHWAQuAaPWmyR5Deha5GLnRQrMAzvAAOgD2+oLxaaSvgBJcf18ExrHxBeCVeAD+ARalMTAI+A+4Lkl4Enz20Tg2SNACmdhAbjW3BPdg9I49QgQOwDqnnwhO9KcW6ARQ97S+ckcH/TND4F3i6DpPLOhsVdgJYY80c2VYutOrKnkRsV0gDclHS3dWgx5A7hRgs6YGdZ1DL7xnMWQ14BjLXSlC5WF0abb9mjFU0888yRsa9IQWC75ldgCzBjLXTo5REKw7ym+V0ZAYi2dHJ+hmFMRQ+3GrvqCBaROoOssXeEZOsgV0LOcF/rrLFQgVkBsgbwOVS7ARManLyCNbGG0AFMxwUyA+fMjmMFMyX7QnwL53S+9/+JRtW3ZAuSaJSIm0YkyV7vq8AWUEMCAdQt5BgAAAABJRU5ErkJggg==">
                 </div>
             </div>
             <div class="p-6">
@@ -120,8 +117,7 @@
             class="block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div class="flex justify-center">
                 <div class="-mt-8 inline-block rounded-full bg-white p-4 text-primary shadow-md">
-                    <img width="40"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABO0lEQVR4nO2YS2rDMBBA36qrfg6Sm+RC/Vwm7lViUmh33fYS9bKliykBCWZhx0qsWCMxDwTGmth6zExkGxzHPD0gC8cbjYgIFTC3UBdZm6Yz8gC8AoOaH4AuzFUj0p1o+o6KRGImNurcRmWmGpGpvhDL/eIi1mg6I8OJZv+mkb/fHZVtiN3IhrgD7jGK6bqf4pD4yH589DeNtPL+IQmLrE6knyin6kX2IzFmkdKlJZkaUv/uoMpJH1cn0qty0seriERyiCyJMSNSbB+RTCKpH+timZkVGWPJteTcbLrIShmJXJyRT+Bvpt5/gQ9gm3jtIiJy5thaFXkEbmZudpx/CvHvI/N6Mywmcpt4w7sQ/3PZeq8v8pyYkZcQ/0VepFSPXGtEXKQ0kisjpREXCXhGrJSWVDImaUbEccjDP+SrIVveErBnAAAAAElFTkSuQmCC">
+                    <img width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABcklEQVR4nO2XQUoDQRBFXxa6iOYOgoybHEQIXkcRcgAV1Cu4cREJKl7BMOhW0RuYKGpQBHdKS0lFm6Yz0zPNJIL5UJuqmvp/qmp6aPhHWAQuAaPWmyR5Deha5GLnRQrMAzvAAOgD2+oLxaaSvgBJcf18ExrHxBeCVeAD+ARalMTAI+A+4Lkl4Enz20Tg2SNACmdhAbjW3BPdg9I49QgQOwDqnnwhO9KcW6ARQ97S+ckcH/TND4F3i6DpPLOhsVdgJYY80c2VYutOrKnkRsV0gDclHS3dWgx5A7hRgs6YGdZ1DL7xnMWQ14BjLXSlC5WF0abb9mjFU0888yRsa9IQWC75ldgCzBjLXTo5REKw7ym+V0ZAYi2dHJ+hmFMRQ+3GrvqCBaROoOssXeEZOsgV0LOcF/rrLFQgVkBsgbwOVS7ARManLyCNbGG0AFMxwUyA+fMjmMFMyX7QnwL53S+9/+JRtW3ZAuSaJSIm0YkyV7vq8AWUEMCAdQt5BgAAAABJRU5ErkJggg=="> 
                 </div>
             </div>
             <div class="p-6">
@@ -213,6 +209,12 @@
                     y: {
                         beginAtZero: true
                     }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Count of Patients for the Past 7 Days'
+                    }
                 }
             }
         });
@@ -240,6 +242,12 @@
                     y: {
                         beginAtZero: true
                     }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Count of Consultations for the Past 7 Days'
+                    }
                 }
             }
         });
@@ -266,6 +274,12 @@
                 scales: {
                     y: {
                         beginAtZero: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Count of The Operations in The Past 7 Days'
                     }
                 }
             }

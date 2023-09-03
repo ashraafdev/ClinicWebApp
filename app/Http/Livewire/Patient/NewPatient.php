@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Patient;
 
 use App\Models\Patient;
 use App\Models\User;
+use Exception;
 use LivewireUI\Modal\ModalComponent;
 
 class NewPatient extends ModalComponent
@@ -22,7 +23,6 @@ class NewPatient extends ModalComponent
 
     public function render()
     {
-        
         return view('livewire.patient.new-patient', [
             'medecins' => User::role('Medecin')->get(),
         ]);
@@ -32,7 +32,11 @@ class NewPatient extends ModalComponent
     {
         $validatedData = $this->validate();
 
-        Patient::create($validatedData);
-        return redirect('/patients');
+        try {
+            Patient::create($validatedData);
+            return redirect('/patients');
+        } catch (Exception $e) {
+            $this->emit('openModal', 'misc.error-modal');
+        }
     }
 }

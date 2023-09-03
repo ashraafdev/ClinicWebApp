@@ -56,10 +56,10 @@ class EditOperation extends ModalComponent
             }
 
             DB::commit();
+            redirect('/operations');
         } catch (Exception $e) {
             DB::rollBack();
+            $this->emit('openModal', 'misc.error-modal');
         }
-
-        redirect('/operations');
     }
 }

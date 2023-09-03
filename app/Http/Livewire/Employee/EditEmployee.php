@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Employee;
 use App\Models\DepSer;
 use App\Models\DepSerLinking;
 use App\Models\User;
+use Exception;
 use Illuminate\Support\Facades\Hash;
 use LivewireUI\Modal\ModalComponent;
 use Spatie\Permission\Models\Role;
@@ -59,23 +60,28 @@ class EditEmployee extends ModalComponent
     {
         $validatedData = $this->validate();
 
-        if (filled($this->password))
-            $validatedData['user']['password'] = Hash::make($validatedData['password']);
-
-        $this->user->update($validatedData['user']);
-        $this->user->syncRoles([$validatedData['user']['typeEmploi']]);
-
-        DepSerLinking::where('infirmierID', $this->user->id)->delete();
-
-        if ($this->showInfirmierOption == true) {
-            if ($this->user->getRoleNames()[0] == 'Infirmier') {
-                DepSerLinking::create([
-                    'infirmierID' => $this->user->id,
-                    'dep_ser_ID' => $this->depSerSelected,
-                ]);
+        try {
+            if (filled($this->password))
+                $validatedData['user']['password'] = Hash::make($validatedData['password']);
+    
+            $this->user->update($validatedData['user']);
+            $this->user->syncRoles([$validatedData['user']['typeEmploi']]);
+    
+            DepSerLinking::where('infirmierID', $this->user->id)->delete();
+    
+            if ($this->showInfirmierOption == true) {
+                if ($this->user->getRoleNames()[0] == 'Infirmier') {
+                    DepSerLinking::create([
+                        'infirmierID' => $this->user->id,
+                        'dep_ser_ID' => $this->depSerSelected,
+                    ]);
+                }
             }
+    
+            return redirect('/employees');
+        } catch (Exception $e) {
+            $this->emit('openModal', 'misc.error-modal');
         }
 
-        return redirect('/employees');
     }
 }

@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('mesure_images', function (Blueprint $table) {
             $table->id();
             $table->string('imageName');
-            $table->foreignId('consultationsID')->nullable()->constrained('consultations');
-            $table->foreignId('operationsID')->nullable()->constrained('operation_consultations');
+            $table->foreignId('consultationsID')->nullable()->constrained('consultations')->onDelete('cascade');
+            $table->foreignId('operationsID')->nullable()->constrained('operation_consultations')->onDelete('cascade');
             $table->timestamps();
         });
     }

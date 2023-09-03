@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Consultation;
 
 use App\Models\Consultation;
+use Exception;
 use LivewireUI\Modal\ModalComponent;
 
 class EditConsultation extends ModalComponent
@@ -26,8 +27,13 @@ class EditConsultation extends ModalComponent
     public function store()
     {
         $validatedData = $this->validate();
+        
+        try {
+            $this->consultation->update($validatedData);
+            return redirect('/consultations');
+        } catch (Exception $e) {
+            $this->emit('openModal', 'misc.error-modal');
+        } 
 
-        $this->consultation->update($validatedData);
-        return redirect('/consultations');
     }
 }

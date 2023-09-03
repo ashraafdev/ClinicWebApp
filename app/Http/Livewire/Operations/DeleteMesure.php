@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Operations;
 
 use App\Models\MesureImages;
+use Exception;
 use Illuminate\Support\Facades\Storage;
 use LivewireUI\Modal\ModalComponent;
 
@@ -17,11 +18,17 @@ class DeleteMesure extends ModalComponent
 
     public function deleteIt()
     {
-        $filename = $this->mesure->name;
-        
-        $this->mesure->delete();
-        Storage::disk('local')->delete('operations/mesures/' . $filename);
+        try {
+            $filename = $this->mesure->name;
+            
+            $this->mesure->delete();
+            Storage::disk('local')->delete('operations/mesures/' . $filename);
 
-        return redirect('/operations');
+            return redirect('/operations');
+        } catch (Exception $e) {
+            $this->emit('openModal', 'misc.error-modal');
+        }
+        
+
     }
 }

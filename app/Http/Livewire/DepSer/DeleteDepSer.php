@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\DepSer;
 
 use App\Models\DepSer;
+use Exception;
 use LivewireUI\Modal\ModalComponent;
 
 class DeleteDepSer extends ModalComponent
@@ -16,8 +17,11 @@ class DeleteDepSer extends ModalComponent
 
     public function deleteIt()
     {
-        $this->dep_ser->delete();
-
-        return redirect('/depsers');
+        try {
+            $this->dep_ser->delete();
+            return redirect('/depsers');
+        } catch (Exception $e) {
+            $this->emit('openModal', 'misc.error-modal');
+        }
     }
 }

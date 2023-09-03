@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('dep_ser_linkings', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('infirmierID')->nullable()->constrained('users');
-            $table->foreignId('medecinID')->nullable()->constrained('users');
-            $table->foreignId('dep_ser_ID')->constrained('dep_sers');
+            $table->foreignId('infirmierID')->nullable()->constrained('users')->onDelete('cascade');
+            $table->foreignId('medecinID')->nullable()->constrained('users')->onDelete('cascade');
+            $table->foreignId('dep_ser_ID')->constrained('dep_sers')->onDelete('cascade');
             $table->timestamps();
         });
     }

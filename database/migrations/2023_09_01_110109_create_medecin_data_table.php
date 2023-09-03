@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('medecin_data', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('medecinID')->constrained('users');
+            $table->foreignId('medecinID')->constrained('users')->onDelete('cascade');
             $table->string('speciality');
             $table->float('cost');
             $table->timestamps();
