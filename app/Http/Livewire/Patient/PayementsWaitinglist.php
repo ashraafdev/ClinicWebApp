@@ -34,7 +34,7 @@ class PayementsWaitinglist extends ModalComponent
     {
         $payementOrder = PaiementOrder::find($payementOrderId);
 
-        return $this->patient->checkoutCharge($payementOrder->amount / 100, $payementOrder->description, 1, [
+        return $this->patient->checkoutCharge(intval($payementOrder->amount * 100), $payementOrder->description, 1, [
             'success_url' => route('patients') .'?session_id={CHECKOUT_SESSION_ID}&pI=' . $this->patient->id,
             'cancel_url' => route('patients') . '?err=1',
         ]);
