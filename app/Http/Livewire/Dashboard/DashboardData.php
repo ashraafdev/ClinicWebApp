@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Dashboard;
 
 use App\Models\Consultation;
 use App\Models\OperationConsultation;
+use App\Models\PaiementOrder;
 use App\Models\Patient;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
@@ -12,6 +13,8 @@ use Livewire\Component;
 class DashboardData extends Component
 {
     public $patients, $employees, $consultations, $operations;
+
+    public $consultationsEarning, $consultationsPending, $operationsEarning, $operationsPending;
 
     public $rolesLabelsPercentage, $rolesPercentageNumbers;  
     public $patientsLabelsPercentage, $patientsPercentageNumbers;  
@@ -25,6 +28,12 @@ class DashboardData extends Component
         $this->consultations = Consultation::count();
         $this->operations = OperationConsultation::count();
 
+        $this->consultationsEarning = PaiementOrder::whereRaw('consultationID IS NOT NULL AND status = 1')->select(DB::raw('SUM(amount) AS total_amount'))->first()->total_amount;
+        $this->consultationsPending = PaiementOrder::whereRaw('consultationID IS NOT NULL AND status = 1')->selectRaw('SUM(amount) AS total_amount')->first()->total_amount;
+
+        $this->operationsEarning = PaiementOrder::whereRaw('operationID IS NOT NULL AND status = 1')->selectRaw('SUM(amount) AS total_amount')->first()->total_amount;
+        $this->operationsPending = PaiementOrder::whereRaw('operationID IS NOT NULL AND status = 0')->selectRaw('SUM(amount) AS total_amount')->first()->total_amount;
+
         $rolesPercentage = User::
                             join('model_has_roles', 'users.id', '=', 'model_has_roles.model_id')
                         ->join('roles', 'model_has_roles.role_id', '=', 'roles.id')
@@ -34,20 +43,23 @@ class DashboardData extends Component
         ->toArray();
 
         $patientsPercentage = Patient::
-                    selectRaw('count(id) as counting, DATE(created_at) as date')
-                ->groupBy(DB::raw('DATE(created_at)'))
+                        selectRaw('count(id) as counting, DATE(created_at) as date')
+                    ->groupBy(DB::raw('DATE(created_at)'))
+                ->limit(7)
             ->get()
         ->toArray();
 
         $consultationsPercentage = Consultation::
-                    selectRaw('count(id) as counting, DATE(created_at) as date')
-                ->groupBy(DB::raw('DATE(created_at)'))
+                        selectRaw('count(id) as counting, DATE(created_at) as date')
+                    ->groupBy(DB::raw('DATE(created_at)'))
+                ->limit(7)
             ->get()
         ->toArray();
 
         $operationsPercentage = OperationConsultation::
-                    selectRaw('count(id) as counting, DATE(created_at) as date')
-                ->groupBy(DB::raw('DATE(created_at)'))
+                        selectRaw('count(id) as counting, DATE(created_at) as date')
+                    ->groupBy(DB::raw('DATE(created_at)'))
+                ->limit(7)
             ->get()
         ->toArray();
         

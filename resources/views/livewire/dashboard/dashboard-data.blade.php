@@ -70,6 +70,8 @@
         </div>
     </div>
 
+    {{-- started here, charts --}}
+
     <div class="">
         <div
             class="block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
@@ -122,6 +124,76 @@
             </div>
             <div class="p-6">
                 <center><canvas id="operationsChart"></canvas></center>
+            </div>
+        </div>
+    </div>
+
+    {{-- start here, statistics of payments --}}
+
+    <div class="">
+        <div
+            class="block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <div class="flex justify-center">
+                <div class="-mt-8 inline-block rounded-full bg-white p-4 text-primary shadow-md">
+                    <img width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE70lEQVR4nO2ae4hVVRTGf+Yjx7GHTBEJmZiWhRY9KFL/SHtA9pqigsKmogwzapDKREjsYQmRYDSa0YPC6J+youid04MejCVhpUXh9FCnhjJNm2m0uTdWfgcWhztz797n3jsjzAcbhnP3Wmetvfda69vrDAygV4wF1gDtQAtwCfupE21A3o0ccBf7mRNfy/iPgWOA+cC/evYCMAtYCLwObAY6gPeBI/vC4FOAJhnwucbPQLcM/gqoc/MvAHamdik9zLmqO/FPD8b8BaxIOZHgaOAeYBWwFLgKeNDJzq62I7e5l98BnA6cCowBhrh5E4AjetAxGLjP7eCfwMFUGccDXTLgO2BU6vejFB95GfosMML9fojiw+/kXPoI1ygTmRGbgDP1/DTFSl4xsVt/vypnpsl574Q5fQB9iLkpg9qccx8AhwOTVUvSsfST+3sG/QBNKQN/B5YAw9yciUAzsBdoBe4HbtD8H+gnOFBHy4yaEyD3lGQeoh9hlozaECCzXjKeulj8PAqsA34FtgIfAgt6yX5lhQVxpwwbV6LMFs23tH0W8GmRYtkFXEkV0KIXXlHi/F80/x2XIGwYZblVKd3G2cDzWqiQoxuNV2SIFctiGOriqqfRATytmkQ10vOhQCOwzRXIeaIxvgja6p6j4E4zYxvfiLY8orjYq+dWhy6tpAM14kl/p85xmrpvB3YVMHy9VnyHe2YEdKr0G915zrGD+ko4MV35Py96vho4V0dmhjLPF87InHbMVvpecbMEtmvXAt+7uU1uN2139wDXl9uJOW7bjVqcXCa9w0RAd7ojeqJ+swUqK5a6VVsMDCr3C9iXvpMas6MS9GWBlHdWIZ/XAM+4uKsvZ+XOKR5ClS6WQaFyg4DHXCpO2HU0JjgqHnODi3UkceYJyberHxAFu8V9IkVPBsqeAbyp1UwqtrHi2kA9Q90lbW1sXDZKQWvgNfQWd4X9DfjW1ZgWFdEQjAH+kPzNgbL/5/GkAp8fmHW6tBMXuucjtat5Ve9QNEjWHDooRHCeBD8LfOGdkrNOShpDREU6Q41hH9fa4BoeJWOzhKwfFYLlkrNjWQhTgJsim3EXS/cWxW9RnCSBbRGs827Jvp1qDZUDgxVz+VLT8SJNtkZaKCaKGyUkcGbq/p4Vq6TbGn1FsbbANTQEl7uVy4v9vqw6ZEGfBRdJ53ulTN6qyZMyvNAMvlEOeKreruexGCs9ltKLIrl/pzuIWc62kb8XnUOXZeBheS1OUSQ0fTjlxwpXpWMwXPIWh0WRHIXRES9qVnu0J0yT7h+Jw2jX9C6KTRli5COxZPvAUwgzpdt6VzGY7O74JXdELEOEYrZk3yhwNK2uvKXfjRXHoF7yL4XQjGWRgf2u6+s+oCr/sKMYGzOk4eXScXspk8frItWmLBGKGjUZEgrvuyzWWDiMOIxQKzUX0NHkNb3cDIpFrWtWL4yg72kskS6zrWScoHrSLQodiyw3RI/rZEuHvpgFoUHbmOvlA2elUQeslA3d+lIWhatdN3GXHJoecWUNQa2YwErXpdytr8CZMF7/juG75lb9vxQbna/dO0+1Z5xWclQqO43UszrNmSSZBv1XxOPSmTCLpF26RjaUDcfpk/I6R9UrMfbobm/vOpYKo0Z0o1H1ZrXoyUY1K7ZrJK2k5Hgkz1s1t1myy6RramTKH8AAqBD+A3ck0b2APbA0AAAAAElFTkSuQmCC">               
+                </div>
+            </div>
+            <div class="p-6">
+                <h3 class="mb-4 text-2xl font-bold text-primary dark:text-primary-400">
+                    {{ $consultationsEarning }} DH
+                </h3>
+                <h5 class="mb-2 text-lg font-medium">Consultation Earning</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+        <div
+            class="block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <div class="flex justify-center">
+                <div class="-mt-8 inline-block rounded-full bg-white p-4 text-primary shadow-md">
+                    <img width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE70lEQVR4nO2ae4hVVRTGf+Yjx7GHTBEJmZiWhRY9KFL/SHtA9pqigsKmogwzapDKREjsYQmRYDSa0YPC6J+youid04MejCVhpUXh9FCnhjJNm2m0uTdWfgcWhztz797n3jsjzAcbhnP3Wmetvfda69vrDAygV4wF1gDtQAtwCfupE21A3o0ccBf7mRNfy/iPgWOA+cC/evYCMAtYCLwObAY6gPeBI/vC4FOAJhnwucbPQLcM/gqoc/MvAHamdik9zLmqO/FPD8b8BaxIOZHgaOAeYBWwFLgKeNDJzq62I7e5l98BnA6cCowBhrh5E4AjetAxGLjP7eCfwMFUGccDXTLgO2BU6vejFB95GfosMML9fojiw+/kXPoI1ygTmRGbgDP1/DTFSl4xsVt/vypnpsl574Q5fQB9iLkpg9qccx8AhwOTVUvSsfST+3sG/QBNKQN/B5YAw9yciUAzsBdoBe4HbtD8H+gnOFBHy4yaEyD3lGQeoh9hlozaECCzXjKeulj8PAqsA34FtgIfAgt6yX5lhQVxpwwbV6LMFs23tH0W8GmRYtkFXEkV0KIXXlHi/F80/x2XIGwYZblVKd3G2cDzWqiQoxuNV2SIFctiGOriqqfRATytmkQ10vOhQCOwzRXIeaIxvgja6p6j4E4zYxvfiLY8orjYq+dWhy6tpAM14kl/p85xmrpvB3YVMHy9VnyHe2YEdKr0G915zrGD+ko4MV35Py96vho4V0dmhjLPF87InHbMVvpecbMEtmvXAt+7uU1uN2139wDXl9uJOW7bjVqcXCa9w0RAd7ojeqJ+swUqK5a6VVsMDCr3C9iXvpMas6MS9GWBlHdWIZ/XAM+4uKsvZ+XOKR5ClS6WQaFyg4DHXCpO2HU0JjgqHnODi3UkceYJyberHxAFu8V9IkVPBsqeAbyp1UwqtrHi2kA9Q90lbW1sXDZKQWvgNfQWd4X9DfjW1ZgWFdEQjAH+kPzNgbL/5/GkAp8fmHW6tBMXuucjtat5Ve9QNEjWHDooRHCeBD8LfOGdkrNOShpDREU6Q41hH9fa4BoeJWOzhKwfFYLlkrNjWQhTgJsim3EXS/cWxW9RnCSBbRGs827Jvp1qDZUDgxVz+VLT8SJNtkZaKCaKGyUkcGbq/p4Vq6TbGn1FsbbANTQEl7uVy4v9vqw6ZEGfBRdJ53ulTN6qyZMyvNAMvlEOeKreruexGCs9ltKLIrl/pzuIWc62kb8XnUOXZeBheS1OUSQ0fTjlxwpXpWMwXPIWh0WRHIXRES9qVnu0J0yT7h+Jw2jX9C6KTRli5COxZPvAUwgzpdt6VzGY7O74JXdELEOEYrZk3yhwNK2uvKXfjRXHoF7yL4XQjGWRgf2u6+s+oCr/sKMYGzOk4eXScXspk8frItWmLBGKGjUZEgrvuyzWWDiMOIxQKzUX0NHkNb3cDIpFrWtWL4yg72kskS6zrWScoHrSLQodiyw3RI/rZEuHvpgFoUHbmOvlA2elUQeslA3d+lIWhatdN3GXHJoecWUNQa2YwErXpdytr8CZMF7/juG75lb9vxQbna/dO0+1Z5xWclQqO43UszrNmSSZBv1XxOPSmTCLpF26RjaUDcfpk/I6R9UrMfbobm/vOpYKo0Z0o1H1ZrXoyUY1K7ZrJK2k5Hgkz1s1t1myy6RramTKH8AAqBD+A3ck0b2APbA0AAAAAElFTkSuQmCC">                
+                </div>
+            </div>
+            <div class="p-6">
+                <h3 class="mb-4 text-2xl font-bold text-primary dark:text-primary-400">
+                    {{ $consultationsPending }} DH
+                </h3>
+                <h5 class="mb-2 text-lg font-medium">Consultation Pending</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+        <div
+            class="block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <div class="flex justify-center">
+                <div class="-mt-8 inline-block rounded-full bg-white p-4 text-primary shadow-md">
+                    <img width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE70lEQVR4nO2ae4hVVRTGf+Yjx7GHTBEJmZiWhRY9KFL/SHtA9pqigsKmogwzapDKREjsYQmRYDSa0YPC6J+youid04MejCVhpUXh9FCnhjJNm2m0uTdWfgcWhztz797n3jsjzAcbhnP3Wmetvfda69vrDAygV4wF1gDtQAtwCfupE21A3o0ccBf7mRNfy/iPgWOA+cC/evYCMAtYCLwObAY6gPeBI/vC4FOAJhnwucbPQLcM/gqoc/MvAHamdik9zLmqO/FPD8b8BaxIOZHgaOAeYBWwFLgKeNDJzq62I7e5l98BnA6cCowBhrh5E4AjetAxGLjP7eCfwMFUGccDXTLgO2BU6vejFB95GfosMML9fojiw+/kXPoI1ygTmRGbgDP1/DTFSl4xsVt/vypnpsl574Q5fQB9iLkpg9qccx8AhwOTVUvSsfST+3sG/QBNKQN/B5YAw9yciUAzsBdoBe4HbtD8H+gnOFBHy4yaEyD3lGQeoh9hlozaECCzXjKeulj8PAqsA34FtgIfAgt6yX5lhQVxpwwbV6LMFs23tH0W8GmRYtkFXEkV0KIXXlHi/F80/x2XIGwYZblVKd3G2cDzWqiQoxuNV2SIFctiGOriqqfRATytmkQ10vOhQCOwzRXIeaIxvgja6p6j4E4zYxvfiLY8orjYq+dWhy6tpAM14kl/p85xmrpvB3YVMHy9VnyHe2YEdKr0G915zrGD+ko4MV35Py96vho4V0dmhjLPF87InHbMVvpecbMEtmvXAt+7uU1uN2139wDXl9uJOW7bjVqcXCa9w0RAd7ojeqJ+swUqK5a6VVsMDCr3C9iXvpMas6MS9GWBlHdWIZ/XAM+4uKsvZ+XOKR5ClS6WQaFyg4DHXCpO2HU0JjgqHnODi3UkceYJyberHxAFu8V9IkVPBsqeAbyp1UwqtrHi2kA9Q90lbW1sXDZKQWvgNfQWd4X9DfjW1ZgWFdEQjAH+kPzNgbL/5/GkAp8fmHW6tBMXuucjtat5Ve9QNEjWHDooRHCeBD8LfOGdkrNOShpDREU6Q41hH9fa4BoeJWOzhKwfFYLlkrNjWQhTgJsim3EXS/cWxW9RnCSBbRGs827Jvp1qDZUDgxVz+VLT8SJNtkZaKCaKGyUkcGbq/p4Vq6TbGn1FsbbANTQEl7uVy4v9vqw6ZEGfBRdJ53ulTN6qyZMyvNAMvlEOeKreruexGCs9ltKLIrl/pzuIWc62kb8XnUOXZeBheS1OUSQ0fTjlxwpXpWMwXPIWh0WRHIXRES9qVnu0J0yT7h+Jw2jX9C6KTRli5COxZPvAUwgzpdt6VzGY7O74JXdELEOEYrZk3yhwNK2uvKXfjRXHoF7yL4XQjGWRgf2u6+s+oCr/sKMYGzOk4eXScXspk8frItWmLBGKGjUZEgrvuyzWWDiMOIxQKzUX0NHkNb3cDIpFrWtWL4yg72kskS6zrWScoHrSLQodiyw3RI/rZEuHvpgFoUHbmOvlA2elUQeslA3d+lIWhatdN3GXHJoecWUNQa2YwErXpdytr8CZMF7/juG75lb9vxQbna/dO0+1Z5xWclQqO43UszrNmSSZBv1XxOPSmTCLpF26RjaUDcfpk/I6R9UrMfbobm/vOpYKo0Z0o1H1ZrXoyUY1K7ZrJK2k5Hgkz1s1t1myy6RramTKH8AAqBD+A3ck0b2APbA0AAAAAElFTkSuQmCC">                
+                </div>
+            </div>
+            <div class="p-6">
+                <h3 class="mb-4 text-2xl font-bold text-primary dark:text-primary-400">
+                    {{ $operationsEarning }} DH
+                </h3>
+                <h5 class="mb-2 text-lg font-medium">Operations Earning</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+        <div
+            class="block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <div class="flex justify-center">
+                <div class="-mt-8 inline-block rounded-full bg-white p-4 text-primary shadow-md">
+                    <img width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE70lEQVR4nO2ae4hVVRTGf+Yjx7GHTBEJmZiWhRY9KFL/SHtA9pqigsKmogwzapDKREjsYQmRYDSa0YPC6J+youid04MejCVhpUXh9FCnhjJNm2m0uTdWfgcWhztz797n3jsjzAcbhnP3Wmetvfda69vrDAygV4wF1gDtQAtwCfupE21A3o0ccBf7mRNfy/iPgWOA+cC/evYCMAtYCLwObAY6gPeBI/vC4FOAJhnwucbPQLcM/gqoc/MvAHamdik9zLmqO/FPD8b8BaxIOZHgaOAeYBWwFLgKeNDJzq62I7e5l98BnA6cCowBhrh5E4AjetAxGLjP7eCfwMFUGccDXTLgO2BU6vejFB95GfosMML9fojiw+/kXPoI1ygTmRGbgDP1/DTFSl4xsVt/vypnpsl574Q5fQB9iLkpg9qccx8AhwOTVUvSsfST+3sG/QBNKQN/B5YAw9yciUAzsBdoBe4HbtD8H+gnOFBHy4yaEyD3lGQeoh9hlozaECCzXjKeulj8PAqsA34FtgIfAgt6yX5lhQVxpwwbV6LMFs23tH0W8GmRYtkFXEkV0KIXXlHi/F80/x2XIGwYZblVKd3G2cDzWqiQoxuNV2SIFctiGOriqqfRATytmkQ10vOhQCOwzRXIeaIxvgja6p6j4E4zYxvfiLY8orjYq+dWhy6tpAM14kl/p85xmrpvB3YVMHy9VnyHe2YEdKr0G915zrGD+ko4MV35Py96vho4V0dmhjLPF87InHbMVvpecbMEtmvXAt+7uU1uN2139wDXl9uJOW7bjVqcXCa9w0RAd7ojeqJ+swUqK5a6VVsMDCr3C9iXvpMas6MS9GWBlHdWIZ/XAM+4uKsvZ+XOKR5ClS6WQaFyg4DHXCpO2HU0JjgqHnODi3UkceYJyberHxAFu8V9IkVPBsqeAbyp1UwqtrHi2kA9Q90lbW1sXDZKQWvgNfQWd4X9DfjW1ZgWFdEQjAH+kPzNgbL/5/GkAp8fmHW6tBMXuucjtat5Ve9QNEjWHDooRHCeBD8LfOGdkrNOShpDREU6Q41hH9fa4BoeJWOzhKwfFYLlkrNjWQhTgJsim3EXS/cWxW9RnCSBbRGs827Jvp1qDZUDgxVz+VLT8SJNtkZaKCaKGyUkcGbq/p4Vq6TbGn1FsbbANTQEl7uVy4v9vqw6ZEGfBRdJ53ulTN6qyZMyvNAMvlEOeKreruexGCs9ltKLIrl/pzuIWc62kb8XnUOXZeBheS1OUSQ0fTjlxwpXpWMwXPIWh0WRHIXRES9qVnu0J0yT7h+Jw2jX9C6KTRli5COxZPvAUwgzpdt6VzGY7O74JXdELEOEYrZk3yhwNK2uvKXfjRXHoF7yL4XQjGWRgf2u6+s+oCr/sKMYGzOk4eXScXspk8frItWmLBGKGjUZEgrvuyzWWDiMOIxQKzUX0NHkNb3cDIpFrWtWL4yg72kskS6zrWScoHrSLQodiyw3RI/rZEuHvpgFoUHbmOvlA2elUQeslA3d+lIWhatdN3GXHJoecWUNQa2YwErXpdytr8CZMF7/juG75lb9vxQbna/dO0+1Z5xWclQqO43UszrNmSSZBv1XxOPSmTCLpF26RjaUDcfpk/I6R9UrMfbobm/vOpYKo0Z0o1H1ZrXoyUY1K7ZrJK2k5Hgkz1s1t1myy6RramTKH8AAqBD+A3ck0b2APbA0AAAAAElFTkSuQmCC">               
+                </div>
+            </div>
+            <div class="p-6">
+                <h3 class="mb-4 text-2xl font-bold text-primary dark:text-primary-400">
+                    {{ $operationsPending }} DH
+                </h3>
+                <h5 class="mb-2 text-lg font-medium">Operations Pending</h5>
             </div>
         </div>
     </div>
@@ -194,7 +266,7 @@
         const ctxPatientRegistration = document.getElementById('patientRegistrationChart');
     
         new Chart(ctxPatientRegistration, {
-            type: 'bar',
+            type: 'line',
             data: {
                 labels: @json($patientsLabelsPercentage),
                 datasets: [{
@@ -227,7 +299,7 @@
         const ctxConsultations = document.getElementById('consultationChart');
     
         new Chart(ctxConsultations, {
-            type: 'bar',
+            type: 'line',
             data: {
                 labels: @json($consultationsLabelsPercentage),
                 datasets: [{
@@ -260,7 +332,7 @@
         const ctxOperations = document.getElementById('operationsChart');
     
         new Chart(ctxOperations, {
-            type: 'bar',
+            type: 'line',
             data: {
                 labels: @json($operationsLabelsPercentage),
                 datasets: [{
