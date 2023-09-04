@@ -7,9 +7,7 @@
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">Observation</th>
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">Date Debut</th>
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">Date Fin</th>
-          @unlessrole('Infirmier')
-            <th scope="col" class="px-6 py-4 font-medium text-gray-900"></th>
-          @endunlessrole
+          <th scope="col" class="px-6 py-4 font-medium text-gray-900"></th>
         </tr>
       </thead>
       <tbody class="divide-y divide-gray-100 border-t border-gray-100">
