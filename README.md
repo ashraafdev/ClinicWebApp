@@ -14,19 +14,35 @@ In addition that this app is linked with a payment system, this payment system i
 
 ## Instructions to benefit from this solution: Installation Steps
 
-- clone this repo: <b>git clone https://github.com/ashraafdev/ClinicWebApp.git</b>
+- clone this repo: `git clone https://github.com/ashraafdev/ClinicWebApp.git`
 
-- rename environement file: <b>mv .env.example .env</b>
+- rename environement file: `mv .env.example .env`
 
-- make a copy example of environement file: <b>cp .env .env.example</b>
+- make a copy example of environement file : `cp .env .env.example`
+> Laravel require it later!
 
-- install php's required dependecies: <b>composer install</b>
-> somtimes some errors occurs when type <b>composer install</b> or <b>composer update</b>, this is because of the difference between php's version between machines, please follow instructions that poping in the console
+- install php's required dependecies: `composer install`
+> somtimes some errors occurs when type `composer install` or `composer update`, this is because of the difference between php's version between machines, please follow instructions that poping in the console
 
-- install jetstream 'a login template for laravel' : <b>php artisan jetstream:install livewire</b>
+- migrate database : `php artisan migrate`
 
-- migrate database : <b>php artisan migrate</b>
+- seed required models :
+  ```
+    php artisan db:seed --class=RoleSeeder
+    php artisan db:seed --class=DepSerSeeder
+    php artisan db:seed
+  ```
 
-- publish required class for spatie/laravel-permission : <b>php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"</b>
+- install node js packages:    `npm install`
 
-- seed required models : <b>php artisan db:seed</b>
+- build the app:    `npm run build`
+
+- generate app key:    `php artisan key:generate`
+
+- launch the backend of the app with (you need two console tabs):
+   ```
+    php artisan serve
+    npm run dev
+  ```
+
+  
