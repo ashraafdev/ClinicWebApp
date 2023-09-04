@@ -45,4 +45,10 @@ In addition that this app is linked with a payment system, this payment system i
     npm run dev
   ```
 
-  
+## App is launched with success NOW!
+
+- app is launched, now you can login to clinic app as an administrator:
+  ```
+    email: administrator@clinic.com
+    password: 1234567890
+  ```
