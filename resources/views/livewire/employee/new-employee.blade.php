@@ -141,7 +141,7 @@
             <label class="block text-gray-700 text-sm  font-bold mb-2">Cost</label>
             <input   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
                 type="number"  placeholder="100 DH"
-                wire:model='cost'
+                wire:model='cost' step="0.01"
                 required
             />
             @error('cost')

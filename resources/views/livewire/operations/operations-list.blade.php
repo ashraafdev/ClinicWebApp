@@ -60,6 +60,12 @@
                         />
                       </svg>
                     </button>
+                    @if ($operation->paymentOrder == null) 
+                      <button
+                        onclick='Livewire.emit("openModal", "operations.proceed-paiement", {{ json_encode(["operationId" => $operation->id, "patient" => $operation->consultation->patient->id]) }})'>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAa0lEQVR4nO2UQQrAMAgE510huTf9/wuah1gKOSol1GKhLuwpqwOKgdSCdmAA8tAD6BrAo7lMHxpAnB0LKNiqRq6uAK6wpWbk2qdGJLkDokck0YCi1C/dwZ2rUv+DOxhvf9d9Png03zRACk0nSP8r0/uyngYAAAAASUVORK5CYII=">
+                      </button>
+                    @endif
                   @endunlessrole
                   @hasrole('Infirmier')
                     <button

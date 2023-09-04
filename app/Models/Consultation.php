@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Consultation extends Model
 {
@@ -20,5 +21,10 @@ class Consultation extends Model
     public function patient(): BelongsTo
     {
         return $this->belongsTo(Patient::class, 'patientID');
+    }
+
+    public function paymentOrder(): HasOne
+    {
+        return $this->hasOne(PaiementOrder::class, 'consultationID');
     }
 }

@@ -2,13 +2,14 @@
 
 namespace App\Http\Livewire\Misc;
 
-use Livewire\Component;
 use LivewireUI\Modal\ModalComponent;
 
-class ErrorModal extends ModalComponent
+class SuccessModal extends ModalComponent
 {
+    public string $message;
+
     public function render()
     {
-        return view('livewire.misc.error-modal');
+        return view('livewire.misc.success-modal');
     }
 }

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('tel');
             $table->string('email');
             $table->foreignId('medecin')->constrained('users')->onDelete('cascade');
+            $table->string('stripe_id')->nullable()->index();
             $table->timestamps();
         });
     }

@@ -6,6 +6,7 @@ use App\Models\Consultation;
 use App\Models\OperationConsultation;
 use App\Models\Patient;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 
 class DashboardData extends Component
@@ -34,19 +35,19 @@ class DashboardData extends Component
 
         $patientsPercentage = Patient::
                     selectRaw('count(id) as counting, DATE(created_at) as date')
-                ->groupBy('created_at')
+                ->groupBy(DB::raw('DATE(created_at)'))
             ->get()
         ->toArray();
 
         $consultationsPercentage = Consultation::
                     selectRaw('count(id) as counting, DATE(created_at) as date')
-                ->groupBy('created_at')
+                ->groupBy(DB::raw('DATE(created_at)'))
             ->get()
         ->toArray();
 
         $operationsPercentage = OperationConsultation::
                     selectRaw('count(id) as counting, DATE(created_at) as date')
-                ->groupBy('created_at')
+                ->groupBy(DB::raw('DATE(created_at)'))
             ->get()
         ->toArray();
         

@@ -23,10 +23,11 @@
     </div>
     @push('scripts')
         <script>
+            
             function showImage(data) {
                 var image = new Image();
                 image.src = "data:image/jpg;base64," + data;
-
+                
                 var w = window.open("");
                 w.document.write(image.outerHTML);
             }

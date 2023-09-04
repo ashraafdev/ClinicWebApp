@@ -20,4 +20,18 @@
             </div>
         </div>
     </div>
+    @push('scripts')
+        <script src="https://js.stripe.com/v3/"></script>
+        <script>
+            setTimeout(() => {
+                let includesSuccess = window.location.search.split('?').join('').split('=').includes('session_id');
+                let includesCanceling = window.location.search.split('?').join('').split('=').includes('err');
+             
+                if (includesSuccess)
+                    window.Livewire.emit('openModal', 'misc.success-modal', {message: 'Payment has been succeed!'});
+                else if (includesCanceling)
+                    window.Livewire.emit('openModal', 'misc.error-modal');
+            }, 300);
+        </script>
+    @endpush
 </x-app-layout>

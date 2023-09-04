@@ -53,6 +53,9 @@
                       />
                     </svg>
                   </button>
+                  <button onclick='Livewire.emit("openModal", "patient.payements-waitinglist", {{ json_encode(["patient" => $patient->id]) }})'>
+                    <img width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACQUlEQVR4nO2YzUsVURiHn0TSTeCiRK2FKxd9LNrZQkRcmOQms0UraSMt2hRBSIs2XXQRIWp/QJ/gyj9A0kW6sRZ9WtAmsqBcmKZFo3iPHDjCMMy9c87MOTN3YB54Ybic857f7857vgYKCgoKfAwAy4AHCEfhASUciRcpxR8XBl6lJN4D7rkwEFY2P8gRIiTGyBEi8M+PA4cN+l8GFoANFfJ5iIwMmFAPPKtS809Um5o1MKExcR9QowbOAGUNA3vAKWrQwEOD5XPKtuAm4EqEgQvAd2AV6A/J8cnAwEcbohuBYWAO2AmIDTOw6vvtW0i+bQMDsm0izgFfQhLnwkAv8K9C4moG+pUJKf58ViXUAqxVSVzNQBTTBgYm4xp4GpE4iYHTBsvoyTjiuzUGSGIAtUlFGbhPDOT2/V4jeVID9eq4UCn/o7hHiRuatRk0UA4ReA34APwGFoGekPEuAfPqICfbvQAGiUkrsBnDwGugM1CC7yrUdBcOiZq4B7Hu6zMC1Knn48DziPnz0pV4nYkr4y1wLNBXnv9vA1sa/eUbljQYLKWRl3rdiStjNNC3D/hsIOSN720JW5f6mwZJpNF2tZbPxhBxVY05bOtS32YwcZOGvMRY53FK4u/iiL+Ohcul8zoOEQ5j11fzuTPwH7joWjyOxG+43nH92Bb/EzhLigiL8RXoSFM8FsWvACfIAGEh5Cf2o1mIx4J4eZY/QoaIBDGjTpWZ4sUQLr/V3AIOUQOUNE38ApaAO0Bz1qILCgrIN/uyivrvICSovgAAAABJRU5ErkJggg==">
+                  </button>
                 </div>
               </td>
             @endif

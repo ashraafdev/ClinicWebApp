@@ -1,17 +1,16 @@
 <?php
 
-namespace App\Http\Livewire\Operations;
+namespace App\Http\Livewire\Consultation;
 
 use App\Models\PaiementOrder;
 use App\Models\Patient;
 use Exception;
-use Livewire\Component;
 use LivewireUI\Modal\ModalComponent;
 
 class ProceedPaiement extends ModalComponent
 {
     public Patient $patient;
-    public int $operationId; 
+    public int $consultationId; 
     public $name, $amount, $description;
 
     protected $rules = [
@@ -26,7 +25,7 @@ class ProceedPaiement extends ModalComponent
 
     public function render()
     {
-        return view('livewire.operations.proceed-paiement');
+        return view('livewire.consultation.proceed-paiement');
     }
 
     public function store()
@@ -34,12 +33,12 @@ class ProceedPaiement extends ModalComponent
         $validatedData = $this->validate();
 
         try {
-            $validatedData['operationID'] = $this->operationId;
+            $validatedData['consultationID'] = $this->consultationId;
             $validatedData['patientID'] = $this->patient->id;
 
             PaiementOrder::create($validatedData);
             
-            return redirect('/operations');
+            return redirect('/consultations');
         } catch (Exception $e) {
             $this->emit('openModal', 'misc.error-modal');
         }

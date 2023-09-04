@@ -6,7 +6,6 @@
         <input   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
             type="text" disabled wire:model='name'
         />
-        
     </div>
 
     <div class="mb-4">
@@ -14,9 +13,6 @@
         <input  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
             type="number" wire:model='amount' placeholder="200 DH" step="0.01"
         />
-        @error('amount')
-            <p class="mt-2 text-sm text-red-600"><span class="font-medium">Oops!</span> {{$message}}</p>
-        @enderror
     </div>
 
     <div class="mb-4">
@@ -24,9 +20,6 @@
         <input   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
             type="text" wire:model='description' placeholder="...."
         />
-        @error('description')
-            <p class="mt-2 text-sm text-red-600"><span class="font-medium">Oops!</span> {{$message}}</p>
-        @enderror
     </div>
 
     <button

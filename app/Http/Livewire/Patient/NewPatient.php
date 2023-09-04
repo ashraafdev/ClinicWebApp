@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Patient;
 use App\Models\Patient;
 use App\Models\User;
 use Exception;
+use Illuminate\Support\Facades\DB;
 use LivewireUI\Modal\ModalComponent;
 
 class NewPatient extends ModalComponent
@@ -31,11 +32,20 @@ class NewPatient extends ModalComponent
     public function store()
     {
         $validatedData = $this->validate();
+        
+        DB::beginTransaction();
 
         try {
-            Patient::create($validatedData);
+            $patient = Patient::create($validatedData);
+
+            $patient->createAsStripeCustomer([
+                'name' => $patient->prenom . ' ' . $patient->nom,
+            ]);
+
+            DB::commit();
             return redirect('/patients');
         } catch (Exception $e) {
+            DB::rollBack();
             $this->emit('openModal', 'misc.error-modal');
         }
     }
