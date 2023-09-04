@@ -47,7 +47,7 @@ class NewConsultation extends ModalComponent
     {
         return view('livewire.consultation.new-consultation', [
             'patients' => Patient::all(),
-            'staff' => User::hasRoles(['Medecin', 'Infirmier', 'Doctor']),
+            'staff' => User::whereIn('typeEmploi', ['Medecin', 'Infirmier', 'Doctor'])->get(),
             'showAdditionalData' => $this->showOperationAdditionalData,
         ]);
     }

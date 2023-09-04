@@ -47,7 +47,7 @@
                                         d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
                                 </svg>
                             </button>
-                            @if ($consultation->paymentOrder == null) 
+                            @if (is_null($consultation->paymentOrder) && is_null($consultation->operation)) 
                                 <button
                                     onclick='Livewire.emit("openModal", "consultation.proceed-paiement", {{ json_encode(["consultationId" => $consultation->id, "patient" => $consultation->patient->id]) }})'>
                                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAa0lEQVR4nO2UQQrAMAgE510huTf9/wuah1gKOSol1GKhLuwpqwOKgdSCdmAA8tAD6BrAo7lMHxpAnB0LKNiqRq6uAK6wpWbk2qdGJLkDokck0YCi1C/dwZ2rUv+DOxhvf9d9Png03zRACk0nSP8r0/uyngYAAAAASUVORK5CYII=">

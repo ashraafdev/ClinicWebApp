@@ -27,4 +27,9 @@ class Consultation extends Model
     {
         return $this->hasOne(PaiementOrder::class, 'consultationID');
     }
+
+    public function operation(): HasOne
+    {
+        return $this->hasOne(OperationConsultation::class, 'consultationID');
+    }
 }

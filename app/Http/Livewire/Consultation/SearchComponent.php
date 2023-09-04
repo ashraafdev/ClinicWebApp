@@ -14,7 +14,7 @@ class SearchComponent extends ModalComponent
         'patient' => 'required_without_all:medecin,startDate,endDate',
         'medecin' => 'required_without_all:patient,startDate,endDate',
         'startDate' => 'required_without_all:patient,medecin,endDate',
-        'endDate' => 'required_without:startDate'
+        'endDate' => 'required_without_all:medecin,patient,startDate'
     ];
 
     public function render()
