@@ -22,9 +22,9 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $admin = User::create([
-            'name' => 'Achraf Hebboul',
-            'email' => 'achraf@clinic.com',
-            'password' => Hash::make('123456789'),
+            'name' => 'administrator',
+            'email' => 'administrator@clinic.com',
+            'password' => Hash::make('1234567890'),
             'cin' => 'xx123456',
             'phone' => '0601020304',
             'address' => 'Agadir Souss-Massa',
