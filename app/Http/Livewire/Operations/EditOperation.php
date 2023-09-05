@@ -32,7 +32,7 @@ class EditOperation extends ModalComponent
     public function render()
     {
         return view('livewire.operations.edit-operation', [
-            'staff' => User::all(),
+            'staff' => User::whereIn('typeEmploi', ['Medecin', 'Infirmier', 'Doctor'])->get(),
         ]);
     }
 

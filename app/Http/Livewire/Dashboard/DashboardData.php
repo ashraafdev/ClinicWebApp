@@ -28,11 +28,11 @@ class DashboardData extends Component
         $this->consultations = Consultation::count();
         $this->operations = OperationConsultation::count();
 
-        $this->consultationsEarning = PaiementOrder::whereRaw('consultationID IS NOT NULL AND status = 1')->select(DB::raw('SUM(amount) AS total_amount'))->first()->total_amount;
-        $this->consultationsPending = PaiementOrder::whereRaw('consultationID IS NOT NULL AND status = 1')->selectRaw('SUM(amount) AS total_amount')->first()->total_amount;
+        $this->consultationsEarning = PaiementOrder::whereRaw('consultationID IS NOT NULL AND status = 1')->select(DB::raw('IFNULL(SUM(amount), 0) AS total_amount'))->first()->total_amount;
+        $this->consultationsPending = PaiementOrder::whereRaw('consultationID IS NOT NULL AND status = 1')->selectRaw('IFNULL(SUM(amount), 0) AS total_amount')->first()->total_amount;
 
-        $this->operationsEarning = PaiementOrder::whereRaw('operationID IS NOT NULL AND status = 1')->selectRaw('SUM(amount) AS total_amount')->first()->total_amount;
-        $this->operationsPending = PaiementOrder::whereRaw('operationID IS NOT NULL AND status = 0')->selectRaw('SUM(amount) AS total_amount')->first()->total_amount;
+        $this->operationsEarning = PaiementOrder::whereRaw('operationID IS NOT NULL AND status = 1')->selectRaw('IFNULL(SUM(amount), 0) AS total_amount')->first()->total_amount;
+        $this->operationsPending = PaiementOrder::whereRaw('operationID IS NOT NULL AND status = 0')->selectRaw('IFNULL(SUM(amount), 0) AS total_amount')->first()->total_amount;
 
         $rolesPercentage = User::
                             join('model_has_roles', 'users.id', '=', 'model_has_roles.model_id')
