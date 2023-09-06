@@ -19,7 +19,7 @@ class MainComponent extends Component
             $paymentData = $patient->stripe()->checkout->sessions->allLineItems($request->get('session_id'));
 
             $productName = $paymentData->data[0]->description;
-            $productPrice = $paymentData->data[0]->amount_total;
+            $productPrice = $paymentData->data[0]->amount_total / 100;
 
             PaiementOrder::where([
                 ['description', '=', $productName],
